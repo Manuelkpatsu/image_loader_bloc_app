@@ -25,7 +25,9 @@ class AppBlocView<T extends AppBloc> extends StatelessWidget {
         builder: (context, appState) {
           if (appState.error != null) {
             // we have an error
-            return const Text('An error occurred. Try again in a minute');
+            return const Center(
+              child: Text('An error occurred. Try again in a minute'),
+            );
           } else if (appState.data != null) {
             // we have data
             return Image.memory(
